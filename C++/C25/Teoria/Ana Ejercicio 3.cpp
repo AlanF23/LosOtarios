@@ -1,10 +1,11 @@
-#include <iostream>
-using namespace std;
-#define N 4
 /*3) Cargar un arreglo con N números y luego, utilizando
 punteros, determinar el menor elemento del arreglo.
 Mostrar el menor, su posición en el arreglo y su
 dirección en memoria.*/
+
+#include <iostream>
+using namespace std;
+#define N 4
 
 int main() {
 	int vec[N],i, *max, *puntero, posv, lim;

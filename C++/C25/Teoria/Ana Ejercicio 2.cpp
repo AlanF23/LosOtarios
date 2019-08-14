@@ -1,7 +1,8 @@
-#include <iostream>
-using namespace std;
 /*2) Ingresar dos números, intercambiar y mostrar sus
 valores utilizando punteros.*/
+
+#include <iostream>
+using namespace std;
 
 int main() {
 	int nro1, nro2, *pnum1, *pnum2, aux;

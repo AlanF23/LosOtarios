@@ -1,7 +1,10 @@
+/*1) Ingresar un número e informar si es primo o no y su
+posición de memoria utilizando punteros.*/
+
 #include <iostream>
 using namespace std;
 
-int main() 
+int main()
 {
 	int num;
 	int *pnum;
@@ -10,7 +13,7 @@ int main()
 	cout<<"Ingrese un numero: ";
 	cin>>num;
 	cin.get();
-	
+
 	for (i=1;i<(num+1);i++)
 	{
 		if (num%i==0)
