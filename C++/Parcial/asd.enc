@@ -1,0 +1,41 @@
+#include <iostream>
+#include <stdio.h>
+#include <cstring>
+using namespace std;
+
+int main(int argc, char *argv[]) {
+	
+	FILE* origen;
+	FILE* destino;
+	
+	long Lsize;
+	char *buffer;
+	
+	origen = fopen("datos.txt", "rb");
+	destino = fopen("copia.txt","wb");
+	
+	fseek(origen,0,SEEK_END);
+	Lsize = ftell(origen);
+	//rewind(origen);
+	fseek(origen,0,SEEK_SET);
+	
+	
+	buffer = (char*) malloc(Lsize);
+	fread(buffer,1,Lsize,origen);
+	/*int cont = 0;
+	for(int i = 0; i<Lsize;i++){
+		cont = cont + sizeof(*buffer+i);
+	}
+	
+	cout<<endl<<"longitud es: "<<cont<<endl;*/
+	
+	fwrite(buffer,Lsize,1,destino);
+
+	fclose(origen);
+	fclose(destino);
+	free(buffer);
+	
+	
+	return 0;
+}
+
